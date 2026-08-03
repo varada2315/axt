@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AXT ADVISORY - Strategic Consulting</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#e2e2e2",
+                        "primary-container": "#0a0a0a",
+                        "surface": "#121414",
+                        "secondary": "#e9c176",
+                        "outline-variant": "#444748",
+                        "on-surface": "#e2e2e2",
+                        "tertiary-container": "#140702",
+                        "surface-container": "#1e2020",
+                        "on-secondary-fixed": "#261900",
+                        "surface-container-highest": "#333535",
+                        "on-tertiary-fixed": "#28180d",
+                        "tertiary": "#dec1af",
+                        "on-tertiary": "#3f2c20",
+                        "on-secondary": "#412d00",
+                        "background": "#121414",
+                        "outline": "#8e9192",
+                        "secondary-container": "#604403",
+                        "inverse-surface": "#e2e2e2",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#2f3131",
+                        "secondary-fixed-dim": "#e9c176",
+                        "tertiary-fixed-dim": "#dec1af",
+                        "surface-container-lowest": "#0c0f0f",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#8d7565",
+                        "on-primary-fixed": "#1c1b1b",
+                        "surface-bright": "#38393a",
+                        "tertiary-fixed": "#fbddca",
+                        "on-surface-variant": "#c4c7c7",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "secondary-fixed": "#ffdea5",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-container-low": "#1a1c1c",
+                        "on-primary-container": "#7b7979",
+                        "on-primary-fixed-variant": "#474646",
+                        "inverse-primary": "#5f5e5e",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-primary": "#313030",
+                        "primary": "#c9c6c5",
+                        "on-tertiary-fixed-variant": "#574335",
+                        "surface-container-high": "#282a2b",
+                        "on-secondary-container": "#dab36a",
+                        "surface-variant": "#333535",
+                        "surface-tint": "#c9c6c5",
+                        "surface-dim": "#121414"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "stack-md": "16px",
+                        "section-gap": "160px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #121414; color: #e2e2e2; }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(18,20,20,0.4), rgba(18,20,20,1)); }
+        .glass-nav { background: rgba(18,20,20,0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .card-umber { background-color: rgba(61, 43, 31, 0.4); border: 1px solid rgba(142, 145, 146, 0.1); }
+        .hover-lift:hover { transform: translateY(-5px); }
+        
+        /* Tailwind Animate-in utilities */
+        .animate-in {
+            animation: animate-in 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        @keyframes animate-in {
+            0% {
+                opacity: 0;
+                transform: translateY(1rem);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-secondary selection:text-on-secondary antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/10">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md tracking-tighter text-on-surface" href="#">AXT ADVISORY</a>
+<div class="hidden md:flex space-x-gutter">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-105 tracking-widest uppercase" href="#services">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-105 tracking-widest uppercase" href="#story">Brand Story</a>
+</div>
+<a class="hidden md:inline-flex px-6 py-3 bg-secondary text-on-secondary font-label-caps text-label-caps uppercase hover:bg-secondary/90 hover:scale-105 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-sm" href="#contact">Consultation</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-transparent">
+<!-- STITCH_SHADER_START:ANIMATION_32 class="absolute inset-0 w-full h-full -z-10" -->
+<div class="absolute inset-0 w-full h-full -z-10" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_32" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_32');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+varying vec2 v_texCoord;
+
+// Simple noise function
+float noise(vec2 p) {
+    return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Create a slow, deep liquid/smoke motion
+    float t = u_time * 0.15;
+    
+    // Background color (very deep black/charcoal)
+    vec3 color1 = vec3(0.04, 0.04, 0.04); 
+    
+    // Accent color (deep dark brown/bronze)
+    vec3 color2 = vec3(0.24, 0.17, 0.12);
+    
+    // Distort UVs for the fluid effect
+    vec2 p = uv * 2.0 - 1.0;
+    p.x *= u_resolution.x / u_resolution.y;
+    
+    float wave = sin(p.x * 2.0 + t) * 0.5 + sin(p.y * 1.5 - t * 0.8) * 0.5;
+    wave += noise(p * 0.5 + t) * 0.1;
+    
+    float mask = smoothstep(-0.5, 1.5, wave + uv.y * 0.5);
+    
+    vec3 finalColor = mix(color1, color2 * 0.3, mask);
+    
+    // Add a bit of vignetting
+    float vignette = 1.0 - length(uv - 0.5) * 1.2;
+    finalColor *= smoothstep(0.0, 0.8, vignette);
+
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_32 -->
+<div class="absolute inset-0 z-0 hidden">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-60 mix-blend-overlay" data-alt="A dark, moody, slow-moving abstract atmospheric background featuring deep charcoal and subtle dark brown (#3D2B1F) smoke-like textures. The lighting is cinematic, minimal, and high-end luxury, conveying a sense of profound strategy and quiet power. 4k resolution, smooth gradients, no sharp edges, perfect for a high-contrast dark UI." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEqrfvPMquMFjKKK6ABk69JFaQnVK8fkgv3Fuy8uOfq4n1UrCONf-DuFEU7WDnnI7BSgiG19MhwNxT6ydZ3HrYU3a4EOwgsLT3N_Vu0Xx7TF80eiwvUpFDqbWzdTz0CVjw8m5_No5lle0y2BA0O8tYMVtflHn224BOfhTSWHzs4DBXCbcf5v-glPsPm1kbfQFuB0hmfdoyMQmGAeetHOZlVaJOoQvqej0_1cEWYhSgy_HbYOF5ZkOX6Vmya2HJziGoZuPcTCTc4Ng')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20 animate-in">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] uppercase mb-stack-lg">Abhishek Thakur</p>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-[#FFFFFF] mb-stack-md mx-auto max-w-4xl">From Personal Choices to National Strategy</h1>
+<p class="font-body-lg text-body-lg text-[#D1D5DB] mb-stack-lg mx-auto max-w-2xl">Ideas That Move People, Markets &amp; Nations.</p>
+<a class="inline-flex px-8 py-4 bg-secondary text-on-secondary font-label-caps text-label-caps uppercase hover:bg-secondary/90 hover:scale-[1.02] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] rounded-sm group shadow-[0_0_20px_rgba(233,193,118,0.15)]" href="#contact">
+                Let's build your strategy
+                <span class="material-symbols-outlined ml-2 text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="relative z-10 bg-background">
+<!-- USP / Core Values -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto fade-in-up">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="card-umber p-8 rounded-lg hover-lift transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-md" style="font-variation-settings: 'wght' 200;">chess</span>
+<h3 class="font-headline-md text-xl md:text-2xl text-on-surface mb-stack-sm">Strategic Thinking</h3>
+<p class="font-body-md text-on-surface-variant">Long-term vision applied to immediate challenges.</p>
+</div>
+<div class="card-umber p-8 rounded-lg hover-lift transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-md" style="font-variation-settings: 'wght' 200;">balance</span>
+<h3 class="font-headline-md text-xl md:text-2xl text-on-surface mb-stack-sm">Balanced Judgment</h3>
+<p class="font-body-md text-on-surface-variant">Objective analysis in high-stakes environments.</p>
+</div>
+<div class="card-umber p-8 rounded-lg hover-lift transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-md" style="font-variation-settings: 'wght' 200;">target</span>
+<h3 class="font-headline-md text-xl md:text-2xl text-on-surface mb-stack-sm">Precision Execution</h3>
+<p class="font-body-md text-on-surface-variant">Flawless implementation of complex directives.</p>
+</div>
+<div class="card-umber p-8 rounded-lg hover-lift transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-md" style="font-variation-settings: 'wght' 200;">monitoring</span>
+<h3 class="font-headline-md text-xl md:text-2xl text-on-surface mb-stack-sm">Measurable Impact</h3>
+<p class="font-body-md text-on-surface-variant">Quantifiable results that drive real growth.</p>
+</div>
+</div>
+</section>
+<!-- Services -->
+<section class="py-section-gap bg-surface-container-low px-margin-mobile md:px-margin-desktop fade-in-up" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="mb-stack-lg md:mb-section-gap text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-stack-sm">Areas of Expertise</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Tailored consulting for distinct domains of influence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="group relative overflow-hidden rounded-lg bg-surface border border-outline-variant/20 hover:border-secondary/50 transition-colors duration-500">
+<div class="h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] grayscale-[0.5] group-hover:grayscale-0" data-alt="A modern, high-end corporate boardroom setting in a sleek skyscraper overlooking a city at night. The atmosphere is quiet, intense, and luxurious. Dark mahogany table, subtle ambient lighting, cinematic depth of field. Professional and strategic mood, aligned with a premium dark UI aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIzdqOftDIfFV79pvsXQrI1xNuL-lV_eNY_RHcI0JbH8nAOPHvOGGdonmDIGKZ-tT9Tn5pts9hTgDj6nz4omcM-S_XyoeQaGjUd7cNpgfWI34h4k91HKEqslIt5Sf9zRP8KQapUaSdOi8AZGnbF1ktPDwyXDa9VWOBfxloLX4HkqmHnvJCMvuQqWJ8ND58Ee4fIAu0nwfrkl9GWRX9UJh0LAA8pp_uCMoK0db73d6uG5MMEITU-FE0o7BbAWRCqHgiDwBv4HpwJvw')"></div>
+</div>
+<div class="p-8 relative bg-gradient-to-t from-surface via-surface to-transparent -mt-20">
+<h3 class="font-headline-md text-2xl text-on-surface mb-stack-sm pt-12">Business Consulting</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Navigating corporate complexity with on-ground expertise. Strategic restructuring, market entry, and crisis management.</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group relative overflow-hidden rounded-lg bg-surface border border-outline-variant/20 hover:border-secondary/50 transition-colors duration-500">
+<div class="h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] grayscale-[0.5] group-hover:grayscale-0" data-alt="A minimalist, ultra-luxurious private study. A classic leather armchair, a subtle reading lamp casting a warm glow over a dark oak desk. The mood is introspective, refined, and personal. Deep shadows, high contrast, perfect for a high-end advisory service concept." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDv0LjVQYVXJROYCJhpXBEMDJCilgNO6bw0S9-AjmjJgQ1xWG1FyXft8VJmb-zBivBN5CPMlmQNIuLWXXW4-NTVFRQH6VJNtU5LWivs2j8JOnlOB6mjchImnHdq_nn9KEJs3lSGUInuMsX9F8TOKtCGrc3bG6nvnECorLvQwCHk96aHNtajb4kYQObBOEsDvOYRTNp3USUkbuECrnbihwWsW437ttR4SMybhyl_ivfkJfa7rjcTYC0sU8mGtABWCkItPJGkK5I6TSI')"></div>
+</div>
+<div class="p-8 relative bg-gradient-to-t from-surface via-surface to-transparent -mt-20">
+<h3 class="font-headline-md text-2xl text-on-surface mb-stack-sm pt-12">Life Advisory</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Personal consulting for high-stakes decision making. Objective counsel for leaders navigating personal and professional crossroads.</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group relative overflow-hidden rounded-lg bg-surface border border-outline-variant/20 hover:border-secondary/50 transition-colors duration-500">
+<div class="h-64 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] grayscale-[0.5] group-hover:grayscale-0" data-alt="An abstract, imposing view of classic architectural columns, perhaps a government building, rendered in deep shadows and moody lighting. A sense of scale, power, and national influence. Black and dark grey tones with a hint of warm ambient light, suitable for a dark, premium political strategy aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1VwLHqMATrgUe4wEM7JBm1NNqqn1KJ50KNNDV4NBCsOL3Hf3LaEpKszhCAdJykiH4UcchzlbUCV0cveZxyzPbg5x3UM1A_qN28lLTf4qrJu_UnlosRB4KSFmzavwQIK2_OqQej176MxG5Tna-skvtBOp8r4rkkiZA4LIw3HCMJ_wd5GjcpqFn3XBA4KFgOR68gX1IML9SrIHs9niT0E2Bu6qkhgmrYusi7dyEdsNGRiTXUgre0VuMy6Dg1UO1bwIm8FvL--r5MyI')"></div>
+</div>
+<div class="p-8 relative bg-gradient-to-t from-surface via-surface to-transparent -mt-20">
+<h3 class="font-headline-md text-2xl text-on-surface mb-stack-sm pt-12">Political Strategy</h3>
+<p class="font-body-md text-on-surface-variant mb-stack-md">Strategic planning for influence and national-level impact. Campaign architecture, narrative control, and policy positioning.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Story -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto fade-in-up" id="story">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-5 mb-stack-lg lg:mb-0">
+<div class="aspect-[3/4] rounded-lg overflow-hidden border border-outline-variant/20 relative">
+<div class="w-full h-full bg-cover bg-center absolute inset-0" data-alt="A striking, abstract macro shot of intersecting geometric planes in dark charcoal and deep bronze. It represents clarity emerging from complexity. Soft, dramatic lighting emphasizing texture and structure. Premium, minimalist aesthetic consistent with a high-end dark UI theme." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBl3RGUManY3wfvX3m-jczBEBryD_DJ51x2ihap0tnOWiTMOfURlBy5toLkheXEAP-SUyKyABwkQ44Ya1JelQU_pvhOvsVpW4QjODJPn20GkujIDvR5e8niy0wfZ0FYsWaxjlFT3EoJjTCUJ3c_NCqCuAAkQ6edOHXcPxrBzGfaKcoIYYfDKw8VfdguS9PyQKKvbyxkXtZFTVV6mjJAwZnc1O2lBllRRd3MitrVOhlmuhMuPAihH2Bal_9BLx7PlOT-86SO-wQVMWo')"></div>
+</div>
+</div>
+<div class="lg:col-span-6 lg:col-start-7">
+<p class="font-label-caps text-label-caps text-secondary tracking-[0.2em] uppercase mb-stack-md">The Philosophy</p>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-stack-lg">Clarity in Complexity</h2>
+<div class="space-y-stack-md font-body-lg text-body-lg text-on-surface-variant">
+<p>AXT ADVISORY was born from the necessity of navigating chaotic environments with precision. We understand that at the highest levels, the lines between personal ambition, corporate strategy, and public influence blur.</p>
+<p>We provide a singular, integrated perspective. From raw street-level experience to boardroom diplomacy, our approach distills noise into actionable clarity.</p>
+</div>
+<div class="mt-stack-lg pt-stack-lg border-t border-outline-variant/20">
+<p class="font-headline-md text-xl text-on-surface italic">"The right strategy simplifies the complex."</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant/10" id="contact">
+<div class="md:col-span-5 mb-stack-lg md:mb-0">
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-stack-lg">AXT ADVISORY</div>
+<p class="font-body-md text-on-surface-variant max-w-md">Clarity in Complexity. Dedicated to providing strategic counsel for the most critical decisions.</p>
+</div>
+<div class="md:col-span-3 md:col-start-7">
+<h4 class="font-label-caps text-label-caps text-on-surface mb-stack-md tracking-widest uppercase">Services</h4>
+<ul class="space-y-stack-sm">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Business Consulting</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Life Advisory</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Political Strategy</a></li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<h4 class="font-label-caps text-label-caps text-on-surface mb-stack-md tracking-widest uppercase">Connect</h4>
+<ul class="space-y-stack-sm">
+<li><a class="font-body-md text-body-md text-secondary hover:text-on-surface transition-colors duration-300" href="mailto:abhishekthakur@axtadvisory.com">abhishekthakur@axtadvisory.com</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300 mt-stack-md block" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="md:col-span-12 mt-section-gap pt-stack-md border-t border-outline-variant/10 flex justify-between items-center text-sm text-on-surface-variant">
+<p>© 2024 AXT ADVISORY. Clarity in Complexity.</p>
+</div>
+</footer>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body></html>
