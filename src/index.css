@@ -119,6 +119,7 @@ input[type=range] {
   -webkit-appearance: none;
   width: 100%;
   background: transparent;
+  touch-action: manipulation;
 }
 
 input[type=range]:focus {
@@ -135,14 +136,29 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=range]::-webkit-slider-thumb {
-  height: 24px;
-  width: 24px;
+  height: 26px;
+  width: 26px;
   border-radius: 50%;
   background: #e9c176;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -7px;
-  box-shadow: 0 0 12px rgba(233, 193, 118, 0.6);
+  margin-top: -8px;
+  box-shadow: 0 0 14px rgba(233, 193, 118, 0.7);
+  transition: transform 0.15s ease;
+}
+
+input[type=range]:active::-webkit-slider-thumb {
+  transform: scale(1.15);
+  background: #f5d796;
+}
+
+/* Hide scrollbar for clean horizontal tab sliders on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Modern White Card Elevation Surfaces */
@@ -173,3 +189,4 @@ input[type=range]::-webkit-slider-thumb {
   background: #282a2b;
   border-radius: 4px;
 }
+

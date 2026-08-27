@@ -187,87 +187,93 @@ export default function Hero({ onOpenConsultation }) {
           preload="auto"
           key={selectedVideo}
           onLoadedData={() => setVideoLoaded(true)}
-          className="absolute inset-0 w-full h-full object-cover scale-105 filter brightness-95 contrast-110 opacity-80 transition-opacity duration-700"
+          className="absolute inset-0 w-full h-full object-cover scale-105 filter brightness-90 contrast-110 opacity-70 transition-opacity duration-700"
         >
           <source src={selectedVideo} type="video/mp4" />
           <source src="/8478752-uhd_3840_2160_25fps.mp4" type="video/mp4" />
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
 
-        {/* Mobile Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0f12] via-[#0d0f12]/40 to-transparent pointer-events-none"></div>
+        {/* Enhanced High-Contrast Dark Gradient Overlay for Mobile Legibility */}
+        <div className="absolute inset-0 bg-[#0d0f12]/75 backdrop-blur-[2px] pointer-events-none"></div>
         <div className="absolute inset-0 pointer-events-none" style={{
-          background: 'radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.08) 0%, rgba(13,15,18,0.85) 85%)'
+          background: 'radial-gradient(circle at 50% 35%, rgba(233, 193, 118, 0.12) 0%, rgba(13,15,18,0.85) 65%, rgba(13,15,18,0.98) 100%)'
         }}></div>
       </div>
 
       {/* Main Hero Content */}
-      <div className="relative z-10 text-center px-4 sm:px-8 md:px-16 max-w-[1440px] mx-auto mt-4 sm:mt-8 animate-in">
+      <div className="relative z-10 text-center px-4 sm:px-8 md:px-16 max-w-[1440px] mx-auto mt-2 sm:mt-6 animate-in">
         {/* Name / Subtitle Badge */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 sm:mb-8 backdrop-blur-xl shadow-2xl">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 mb-4 sm:mb-8 backdrop-blur-xl shadow-2xl">
           <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-          <p className="font-mono text-[11px] sm:text-xs text-white tracking-[0.2em] uppercase font-semibold">
+          <p className="font-mono text-[10px] sm:text-xs text-white tracking-[0.2em] uppercase font-semibold">
             ABHISHEK THAKUR
           </p>
         </div>
 
         {/* Hero Title */}
-        <h1 className="font-headline text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-white font-semibold tracking-tight mb-6 sm:mb-8 mx-auto max-w-5xl leading-[1.15] drop-shadow-2xl">
-          From Personal Choices <br className="hidden sm:block" />
-          to <span className="italic font-normal text-gold-gradient drop-shadow-[0_0_35px_rgba(255,255,255,0.4)]">National Strategy</span>
+        <h1 className="font-headline text-[28px] xs:text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-white font-bold tracking-tight mb-3 sm:mb-6 mx-auto max-w-5xl leading-[1.2] sm:leading-[1.15] drop-shadow-2xl px-1">
+          From Personal Choices <br className="block" />
+          to <span className="italic font-normal text-gold-gradient drop-shadow-[0_0_30px_rgba(233,193,118,0.5)]">National Strategy</span>
         </h1>
 
         {/* Subtitle / Tagline */}
-        <p className="font-body text-base sm:text-xl md:text-2xl text-gray-200 mb-8 sm:mb-12 mx-auto max-w-2xl font-light leading-relaxed drop-shadow-md">
+        <p className="font-body text-sm sm:text-xl md:text-2xl text-gray-200 mb-6 sm:mb-10 mx-auto max-w-xl font-light leading-relaxed drop-shadow-md px-2">
           Ideas That Move People, Markets &amp; Nations.
         </p>
 
         {/* Mobile Stacked Pill CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 w-full max-w-md sm:max-w-none mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full max-w-sm sm:max-w-none mx-auto">
           <button 
-            onClick={onOpenConsultation}
-            className="w-full sm:w-auto btn-modern-primary px-8 sm:px-10 py-4 text-xs font-bold uppercase tracking-[0.18em] flex items-center justify-center gap-3 group"
+            onClick={() => onOpenConsultation('Business Consulting')}
+            className="w-full sm:w-auto btn-modern-primary px-6 sm:px-10 py-3.5 sm:py-4 text-xs font-bold uppercase tracking-[0.16em] sm:tracking-[0.18em] flex items-center justify-center gap-2.5 group shadow-[0_0_25px_rgba(233,193,118,0.3)] active:scale-95"
           >
-            <Sparkles className="w-4 h-4 text-on-secondary" />
+            <Sparkles className="w-4 h-4 text-on-secondary shrink-0" />
             <span>Let's build your strategy</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300 shrink-0" />
           </button>
           
           <a
             href="#story"
-            className="w-full sm:w-auto btn-modern-secondary px-8 sm:px-9 py-4 text-xs font-semibold uppercase tracking-[0.18em] flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto btn-modern-secondary px-6 sm:px-9 py-3.5 sm:py-4 text-xs font-semibold uppercase tracking-[0.16em] sm:tracking-[0.18em] flex items-center justify-center gap-2 group active:scale-95"
           >
-            <Compass className="w-4 h-4 text-secondary group-hover:rotate-45 transition-transform duration-500" />
+            <Compass className="w-4 h-4 text-secondary group-hover:rotate-45 transition-transform duration-500 shrink-0" />
             <span>Explore Philosophy</span>
           </a>
         </div>
 
-        {/* Executive Metrics Bar - 2x2 Grid on Mobile */}
-        <div className="mt-12 sm:mt-20 pt-6 sm:pt-8 pb-6 sm:pb-8 px-4 sm:px-6 bg-white/[0.04] backdrop-blur-xl rounded-2xl border border-white/15 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto text-left shadow-2xl">
-          <div className="p-2 sm:p-3 border-r border-white/10">
-            <div className="text-xl sm:text-2xl md:text-3xl font-headline font-bold text-gold-gradient">15+</div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-gray-300 mt-1 font-mono">Strategic Counsel</div>
+        {/* Executive Metrics Bar - Crisp Symmetrical 2x2 Grid on Mobile */}
+        <div className="mt-6 sm:mt-16 p-2 sm:p-6 bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/15 grid grid-cols-2 md:grid-cols-4 max-w-4xl mx-auto text-left shadow-2xl">
+          <div className="p-3 sm:p-4 border-r border-b md:border-b-0 border-white/10">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-gold-gradient">15+</div>
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">Strategic Counsel</div>
           </div>
-          <div className="p-2 sm:p-3 md:border-r border-white/10">
-            <div className="text-xl sm:text-2xl md:text-3xl font-headline font-bold text-gold-gradient">$2B+</div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-gray-300 mt-1 font-mono">Transaction Value</div>
+          <div className="p-3 sm:p-4 border-b md:border-b-0 md:border-r border-white/10">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-gold-gradient">$2B+</div>
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">Transaction Value</div>
           </div>
-          <div className="p-2 sm:p-3 border-r border-white/10">
-            <div className="text-xl sm:text-2xl md:text-3xl font-headline font-bold text-gold-gradient">30+</div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-gray-300 mt-1 font-mono">National Campaigns</div>
+          <div className="p-3 sm:p-4 border-r border-white/10">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-gold-gradient">30+</div>
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">National Campaigns</div>
           </div>
-          <div className="p-2 sm:p-3">
-            <div className="text-xl sm:text-2xl md:text-3xl font-headline font-bold text-gold-gradient">100%</div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-gray-300 mt-1 font-mono">Discreet Advisory</div>
+          <div className="p-3 sm:p-4">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-gold-gradient">100%</div>
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">Discreet Advisory</div>
           </div>
+        </div>
+
+        {/* Trust & Credential Banner - Centered Executive Pill */}
+        <div className="mt-4 sm:mt-6 px-4 py-2.5 bg-white/[0.04] border border-white/15 rounded-full max-w-2xl mx-auto flex items-center justify-center gap-2 text-center text-[10px] sm:text-xs font-mono uppercase tracking-wide text-gray-300 shadow-lg">
+          <span className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0 animate-pulse"></span>
+          <span>Discrete Counsel to Sovereign Funds, Fortune 500 Boards &amp; Cabinet Offices</span>
         </div>
       </div>
 
       {/* Touch-Friendly Floating Video Controls */}
-      <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6 z-30 flex items-center gap-1.5 sm:gap-2 bg-white/10 backdrop-blur-2xl p-1.5 sm:p-2 rounded-full border border-white/20 text-white shadow-2xl scale-95 sm:scale-100">
+      <div className="absolute bottom-2 right-2 sm:bottom-6 sm:right-6 z-30 flex items-center gap-1 sm:gap-2 bg-white/10 backdrop-blur-2xl p-1 sm:p-2 rounded-full border border-white/20 text-white shadow-2xl">
         <button
           onClick={togglePlay}
-          className="p-2 sm:p-2.5 hover:text-secondary transition-colors rounded-full hover:bg-white/15"
+          className="p-1.5 sm:p-2.5 hover:text-secondary transition-colors rounded-full hover:bg-white/15"
           title={isPlaying ? "Pause Video" : "Play Video"}
         >
           {isPlaying ? <Pause className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-secondary" /> : <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
@@ -277,7 +283,7 @@ export default function Hero({ onOpenConsultation }) {
 
         <button
           onClick={toggleMute}
-          className="p-2 sm:p-2.5 hover:text-secondary transition-colors rounded-full hover:bg-white/15"
+          className="p-1.5 sm:p-2.5 hover:text-secondary transition-colors rounded-full hover:bg-white/15"
           title={isMuted ? "Unmute Audio" : "Mute Audio"}
         >
           {isMuted ? <VolumeX className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : <Volume2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-secondary" />}
@@ -288,7 +294,7 @@ export default function Hero({ onOpenConsultation }) {
         <div className="relative">
           <button
             onClick={() => setShowVideoMenu(!showVideoMenu)}
-            className="p-2 sm:p-2.5 hover:text-secondary transition-colors rounded-full hover:bg-white/15 flex items-center gap-1 text-xs font-mono"
+            className="p-1.5 sm:p-2.5 hover:text-secondary transition-colors rounded-full hover:bg-white/15 flex items-center gap-1 text-xs font-mono"
             title="Select Video Stream Preset"
           >
             <Video className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-secondary" />
@@ -296,7 +302,7 @@ export default function Hero({ onOpenConsultation }) {
           </button>
 
           {showVideoMenu && (
-            <div className="absolute bottom-12 right-0 w-56 sm:w-60 bg-[#16191c]/95 border border-white/20 rounded-2xl shadow-2xl p-2.5 space-y-1 z-50 backdrop-blur-2xl animate-in fade-in slide-in-from-bottom-2">
+            <div className="absolute bottom-11 right-0 w-52 sm:w-60 bg-[#16191c]/95 border border-white/20 rounded-2xl shadow-2xl p-2.5 space-y-1 z-50 backdrop-blur-2xl animate-in fade-in slide-in-from-bottom-2">
               <div className="text-[10px] font-mono uppercase tracking-widest text-secondary px-2 py-1 flex justify-between items-center">
                 <span>Video Source</span>
                 <RefreshCw className="w-3 h-3 animate-spin text-secondary" />

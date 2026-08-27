@@ -12,8 +12,12 @@ import MouseSpotlight from './components/MouseSpotlight';
 
 export default function App() {
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
+  const [initialDomain, setInitialDomain] = useState('Business Consulting');
 
-  const handleOpenConsultation = () => {
+  const handleOpenConsultation = (domain = 'Business Consulting') => {
+    if (typeof domain === 'string' && domain) {
+      setInitialDomain(domain);
+    }
     setIsConsultationOpen(true);
   };
 
@@ -27,17 +31,17 @@ export default function App() {
       <MouseSpotlight />
 
       {/* Global Background Grid Pattern */}
-      <div className="fixed inset-0 bg-grid-pattern opacity-40 pointer-events-none z-0"></div>
+      <div className="fixed inset-0 bg-grid-pattern opacity-30 pointer-events-none z-0"></div>
 
       <Navbar onOpenConsultation={handleOpenConsultation} />
       
-      <main className="relative z-10 space-y-12">
+      <main className="relative z-10 space-y-8 sm:space-y-12">
         <Hero onOpenConsultation={handleOpenConsultation} />
         <Values />
         <Services onOpenConsultation={handleOpenConsultation} />
         <StrategyCalculator onOpenConsultation={handleOpenConsultation} />
         <ExecutionTimeline />
-        <Philosophy />
+        <Philosophy onOpenConsultation={handleOpenConsultation} />
       </main>
 
       <Footer onOpenConsultation={handleOpenConsultation} />
@@ -45,6 +49,7 @@ export default function App() {
       <ConsultationModal 
         isOpen={isConsultationOpen} 
         onClose={handleCloseConsultation} 
+        initialDomain={initialDomain}
       />
     </div>
   );
