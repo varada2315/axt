@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, ArrowUpRight, ArrowUp, Globe } from 'lucide-react';
+import { Mail, ArrowUpRight, ArrowUp, Linkedin, Twitter } from 'lucide-react';
+import axtLogo from '../bda9048c-832f-477d-ad22-2eb5c26e0dab.jpg';
 
 export default function Footer({ onOpenConsultation }) {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -37,11 +38,18 @@ export default function Footer({ onOpenConsultation }) {
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-12">
         {/* Brand Col */}
         <div className="md:col-span-5">
-          <div className="font-headline text-2xl sm:text-4xl font-bold tracking-tight text-white mb-3 sm:mb-4">
-            AXT ADVISORY
+          <div className="flex items-center gap-3 mb-3 sm:mb-4">
+            <img
+              src={axtLogo}
+              alt="AXT Advisory"
+              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover mix-blend-lighten flex-shrink-0"
+            />
+            <div className="font-headline text-2xl sm:text-3xl font-bold tracking-tight text-white">
+              AXT ADVISORY
+            </div>
           </div>
           <p className="font-body text-xs sm:text-sm text-gray-300 max-w-md font-light leading-relaxed mb-5 sm:mb-6">
-            Clarity in Complexity. Dedicated to providing strategic counsel for the most critical decisions across enterprise, private life, and national spheres.
+            Clarity in Complexity. Discreet counsel for decisions that shape businesses, lives and institutions.
           </p>
           
           <div className="flex flex-wrap items-center gap-3">
@@ -51,19 +59,48 @@ export default function Footer({ onOpenConsultation }) {
             </div>
           </div>
 
-          {/* Global Hub Timezones */}
-          <div className="mt-5 pt-4 border-t border-white/10 flex flex-wrap gap-4 text-[10px] font-mono text-gray-400">
-            <div className="flex items-center gap-1">
-              <Globe className="w-3 h-3 text-secondary shrink-0" />
-              <span className="text-white font-bold">Global Hubs:</span>
+          {/* Social Channels: LinkedIn, Twitter, Telegram */}
+          <div className="mt-5 pt-4 border-t border-white/10">
+            <div className="text-[10px] sm:text-[11px] font-mono text-gray-400 uppercase tracking-widest mb-3 font-semibold">
+              Follow & Connect:
             </div>
-            <span>LON (GMT)</span>
-            <span>•</span>
-            <span>DXB (GST)</span>
-            <span>•</span>
-            <span>SIN (SGT)</span>
-            <span>•</span>
-            <span>NYC (EST)</span>
+            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
+              <a 
+                href="https://www.linkedin.com/company/axt-advisory/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 hover:bg-secondary hover:text-on-secondary border border-white/15 hover:border-secondary rounded-full text-xs font-mono text-gray-200 transition-all duration-300 active:scale-95 group"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+                <span>LinkedIn</span>
+                <ArrowUpRight className="w-3 h-3 opacity-60 group-hover:opacity-100 transition-opacity" />
+              </a>
+              <a 
+                href="https://x.com/AxTADVISORY" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 hover:bg-secondary hover:text-on-secondary border border-white/15 hover:border-secondary rounded-full text-xs font-mono text-gray-200 transition-all duration-300 active:scale-95 group"
+                aria-label="Twitter / X"
+              >
+                <Twitter className="w-3.5 h-3.5" />
+                <span>Twitter</span>
+                <ArrowUpRight className="w-3 h-3 opacity-60 group-hover:opacity-100 transition-opacity" />
+              </a>
+              <a 
+                href="https://t.me/axtadvisory" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 hover:bg-secondary hover:text-on-secondary border border-white/15 hover:border-secondary rounded-full text-xs font-mono text-gray-200 transition-all duration-300 active:scale-95 group"
+                aria-label="Telegram Channel"
+              >
+                <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                </svg>
+                <span>Telegram Channel</span>
+                <ArrowUpRight className="w-3 h-3 opacity-60 group-hover:opacity-100 transition-opacity" />
+              </a>
+            </div>
           </div>
         </div>
 

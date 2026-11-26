@@ -7,6 +7,6 @@ export default defineConfig({
   server: {
     port: 4912,
     host: '0.0.0.0',
-    allowedHosts: ['axt.cyberpunk.co.in', 'localhost', '127.0.0.1']
+    allowedHosts: ['axtdemo.cyberpunk.co.in', 'axt.cyberpunk.co.in', 'localhost', '127.0.0.1']
   }
 })

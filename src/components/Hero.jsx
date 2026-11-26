@@ -169,7 +169,7 @@ export default function Hero({ onOpenConsultation }) {
   };
 
   return (
-    <header className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center pt-20 sm:pt-24 pb-12 sm:pb-16 overflow-hidden bg-[#0d0f12]">
+    <header className="relative min-h-[90vh] sm:min-h-screen flex items-center justify-center pt-24 sm:pt-32 pb-16 sm:pb-24 overflow-hidden bg-[#0d0f12]">
       {/* Canvas Shader Engine */}
       <canvas 
         ref={canvasRef} 
@@ -202,31 +202,23 @@ export default function Hero({ onOpenConsultation }) {
       </div>
 
       {/* Main Hero Content */}
-      <div className="relative z-10 text-center px-4 sm:px-8 md:px-16 max-w-[1440px] mx-auto mt-2 sm:mt-6 animate-in">
-        {/* Name / Subtitle Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 mb-4 sm:mb-8 backdrop-blur-xl shadow-2xl">
-          <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-          <p className="font-mono text-[10px] sm:text-xs text-white tracking-[0.2em] uppercase font-semibold">
-            ABHISHEK THAKUR
-          </p>
-        </div>
-
+      <div className="relative z-10 text-center px-4 sm:px-8 md:px-16 max-w-[1440px] mx-auto mt-6 sm:mt-12 animate-in">
         {/* Hero Title */}
-        <h1 className="font-headline text-[28px] xs:text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-white font-bold tracking-tight mb-3 sm:mb-6 mx-auto max-w-5xl leading-[1.2] sm:leading-[1.15] drop-shadow-2xl px-1">
-          From Personal Choices <br className="block" />
+        <h1 className="font-headline text-[30px] xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold tracking-tight mb-5 sm:mb-8 mx-auto max-w-5xl leading-[1.3] sm:leading-[1.18] drop-shadow-2xl px-2">
+          From Individual Choices <br className="block" />
           to <span className="italic font-normal text-gold-gradient drop-shadow-[0_0_30px_rgba(233,193,118,0.5)]">National Strategy</span>
         </h1>
 
         {/* Subtitle / Tagline */}
-        <p className="font-body text-sm sm:text-xl md:text-2xl text-gray-200 mb-6 sm:mb-10 mx-auto max-w-xl font-light leading-relaxed drop-shadow-md px-2">
-          Ideas That Move People, Markets &amp; Nations.
+        <p className="font-body text-sm sm:text-lg md:text-xl text-gray-200 mb-8 sm:mb-12 mx-auto max-w-2xl font-light leading-relaxed drop-shadow-md px-3">
+          Ideas That Move People, Community, Markets or Nation
         </p>
 
         {/* Mobile Stacked Pill CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full max-w-sm sm:max-w-none mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-[340px] sm:max-w-none mx-auto">
           <button 
             onClick={() => onOpenConsultation('Business Consulting')}
-            className="w-full sm:w-auto btn-modern-primary px-6 sm:px-10 py-3.5 sm:py-4 text-xs font-bold uppercase tracking-[0.16em] sm:tracking-[0.18em] flex items-center justify-center gap-2.5 group shadow-[0_0_25px_rgba(233,193,118,0.3)] active:scale-95"
+            className="w-full sm:w-auto btn-modern-primary px-7 sm:px-10 py-4 sm:py-4.5 text-xs font-bold uppercase tracking-[0.16em] sm:tracking-[0.18em] flex items-center justify-center gap-2.5 group shadow-[0_0_25px_rgba(233,193,118,0.3)] active:scale-95"
           >
             <Sparkles className="w-4 h-4 text-on-secondary shrink-0" />
             <span>Let's build your strategy</span>
@@ -234,38 +226,51 @@ export default function Hero({ onOpenConsultation }) {
           </button>
           
           <a
-            href="#story"
-            className="w-full sm:w-auto btn-modern-secondary px-6 sm:px-9 py-3.5 sm:py-4 text-xs font-semibold uppercase tracking-[0.16em] sm:tracking-[0.18em] flex items-center justify-center gap-2 group active:scale-95"
+            href="#methodology"
+            className="w-full sm:w-auto btn-modern-secondary px-7 sm:px-9 py-4 sm:py-4.5 text-xs font-semibold uppercase tracking-[0.16em] sm:tracking-[0.18em] flex items-center justify-center gap-2 group active:scale-95"
           >
             <Compass className="w-4 h-4 text-secondary group-hover:rotate-45 transition-transform duration-500 shrink-0" />
-            <span>Explore Philosophy</span>
+            <span>Explore Methodology</span>
           </a>
         </div>
 
-        {/* Executive Metrics Bar - Crisp Symmetrical 2x2 Grid on Mobile */}
-        <div className="mt-6 sm:mt-16 p-2 sm:p-6 bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/15 grid grid-cols-2 md:grid-cols-4 max-w-4xl mx-auto text-left shadow-2xl">
-          <div className="p-3 sm:p-4 border-r border-b md:border-b-0 border-white/10">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-gold-gradient">15+</div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">Strategic Counsel</div>
+        {/* Executive Metrics Bar - 5 Revised Statistics */}
+        <div className="mt-12 sm:mt-20 p-3 sm:p-5 bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/15 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 max-w-5xl mx-auto text-left shadow-2xl">
+          <div className="p-3 sm:p-4 rounded-xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+            <div className="font-mono text-[10px] sm:text-xs text-secondary font-bold tracking-wider mb-1">01</div>
+            <div className="text-2xl sm:text-3xl font-headline font-extrabold text-gold-gradient tracking-tight">10+</div>
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">Strategic Engagement</div>
           </div>
-          <div className="p-3 sm:p-4 border-b md:border-b-0 md:border-r border-white/10">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-gold-gradient">$2B+</div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">Transaction Value</div>
+          
+          <div className="p-3 sm:p-4 rounded-xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+            <div className="font-mono text-[10px] sm:text-xs text-secondary font-bold tracking-wider mb-1">02</div>
+            <div className="text-2xl sm:text-3xl font-headline font-extrabold text-gold-gradient tracking-tight">5 Cr+</div>
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">Transaction Value Advised</div>
           </div>
-          <div className="p-3 sm:p-4 border-r border-white/10">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-gold-gradient">30+</div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">National Campaigns</div>
+
+          <div className="p-3 sm:p-4 rounded-xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+            <div className="font-mono text-[10px] sm:text-xs text-secondary font-bold tracking-wider mb-1">03</div>
+            <div className="text-2xl sm:text-3xl font-headline font-extrabold text-gold-gradient tracking-tight">5+</div>
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">Public Campaigns</div>
           </div>
-          <div className="p-3 sm:p-4">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-headline font-extrabold text-gold-gradient">100%</div>
-            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">Discreet Advisory</div>
+
+          <div className="p-3 sm:p-4 rounded-xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+            <div className="font-mono text-[10px] sm:text-xs text-secondary font-bold tracking-wider mb-1">04</div>
+            <div className="text-2xl sm:text-3xl font-headline font-extrabold text-gold-gradient tracking-tight">2+</div>
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">National &amp; Political Campaign</div>
+          </div>
+
+          <div className="p-3 sm:p-4 rounded-xl bg-white/[0.02] border border-white/10 flex flex-col justify-between col-span-2 sm:col-span-1">
+            <div className="font-mono text-[10px] sm:text-xs text-secondary font-bold tracking-wider mb-1">05</div>
+            <div className="text-2xl sm:text-3xl font-headline font-extrabold text-gold-gradient tracking-tight">100%</div>
+            <div className="text-[10px] sm:text-[11px] uppercase tracking-normal text-gray-300 mt-1 font-mono leading-tight">Discreet Counsel</div>
           </div>
         </div>
 
         {/* Trust & Credential Banner - Centered Executive Pill */}
-        <div className="mt-4 sm:mt-6 px-4 py-2.5 bg-white/[0.04] border border-white/15 rounded-full max-w-2xl mx-auto flex items-center justify-center gap-2 text-center text-[10px] sm:text-xs font-mono uppercase tracking-wide text-gray-300 shadow-lg">
+        <div className="mt-4 sm:mt-6 px-4 py-2.5 bg-white/[0.04] border border-white/15 rounded-full max-w-3xl mx-auto flex items-center justify-center gap-2 text-center text-[10px] sm:text-xs font-mono uppercase tracking-wide text-gray-300 shadow-lg">
           <span className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0 animate-pulse"></span>
-          <span>Discrete Counsel to Sovereign Funds, Fortune 500 Boards &amp; Cabinet Offices</span>
+          <span>DISCRETE COUNSEL FOR FOUNDERS, INSTITUTIONS, BUSINESSES &amp; PUBLIC LEADERS</span>
         </div>
       </div>
 

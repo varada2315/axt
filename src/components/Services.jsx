@@ -5,43 +5,128 @@ const servicesData = [
   {
     id: 'business',
     title: 'Business Consulting',
-    subtitle: 'Strategic Restructuring & Market Dominance',
-    description: 'Navigating corporate complexity with on-ground expertise. Strategic restructuring, market entry, M&A advisory, and crisis management for enterprise organizations.',
+    positioning: 'Strategy for Growth. Structure for Scale.',
+    subtitle: 'Strategy for Growth. Structure for Scale.',
+    description: 'Navigate complex markets, critical transitions and high-stakes decisions with grounded strategic counsel. From market entry and restructuring to M&A and crisis response, we help businesses turn complexity into strategic advantage.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCIzdqOftDIfFV79pvsXQrI1xNuL-lV_eNY_RHcI0JbH8nAOPHvOGGdonmDIGKZ-tT9Tn5pts9hTgDj6nz4omcM-S_XyoeQaGjUd7cNpgfWI34h4k91HKEqslIt5Sf9zRP8KQapUaSdOi8AZGnbF1ktPDwyXDa9VWOBfxloLX4HkqmHnvJCMvuQqWJ8ND58Ee4fIAu0nwfrkl9GWRX9UJh0LAA8pp_uCMoK0db73d6uG5MMEITU-FE0o7BbAWRCqHgiDwBv4HpwJvw',
-    tags: ['Corporate Strategy', 'Risk Assessment', 'M&A Advisory', 'Crisis Management'],
-    deliverables: [
-      'C-Suite Strategic Playbooks',
-      'Market Penetration Architecture',
-      'Organizational Alignment Diagnostics',
-      'Operational Efficiency Optimization'
+    tags: ['New Business Development', 'Crisis Counsel', 'Global Trade & Compliance'],
+    frameworkTitle: 'Practice Framework',
+    framework: [
+      {
+        num: '01',
+        title: 'NEW BUSINESS DEVELOPMENT',
+        content: 'Market Entry · Growth Strategy · Opportunity Development · Governments Grants & Subsidies'
+      },
+      {
+        num: '02',
+        title: 'BUSINESS PROTECTION & CRISIS COUNSEL',
+        content: 'Individual Threat Assessment · Risk Response · Crisis Management'
+      },
+      {
+        num: '03',
+        title: 'LEGAL & REGULATORY CONSULTATION',
+        content: 'Legal Guidance · Regulatory Strategy · Documentation'
+      },
+      {
+        num: '04',
+        title: 'LICENSES & COMPLIANCE',
+        content: 'Registrations · Licensing · Regulatory Compliance'
+      },
+      {
+        num: '05',
+        title: 'STRATEGIC BUSINESS CONNECTIONS',
+        content: 'Partnerships · Introductions · Market Access'
+      },
+      {
+        num: '06',
+        title: 'GLOBAL SOURCING & TRADING',
+        content: 'Raw material Sourcing · Import- Export · Cross-border trade & Activities'
+      }
     ]
   },
   {
     id: 'life',
     title: 'Life Advisory',
-    subtitle: 'Private Counsel for Key Decision Makers',
-    description: 'Personal consulting for high-stakes decision making. Objective, high-confidentiality counsel for leaders, founders, and executives navigating personal and professional crossroads.',
+    positioning: 'Private Counsel for Defining Decisions',
+    subtitle: 'Private Counsel for Defining Decisions',
+    description: 'Discreet, objective counsel for individuals navigating consequential personal and professional decisions. We bring structured thinking, perspective and clarity to moments where the right choice matters.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDv0LjVQYVXJROYCJhpXBEMDJCilgNO6bw0S9-AjmjJgQ1xWG1FyXft8VJmb-zBivBN5CPMlmQNIuLWXXW4-NTVFRQH6VJNtU5LWivs2j8JOnlOB6mjchImnHdq_nn9KEJs3lSGUInuMsX9F8TOKtCGrc3bG6nvnECorLvQwCHk96aHNtajb4kYQObBOEsDvOYRTNp3USUkbuECrnbihwWsW437ttR4SMybhyl_ivfkJfa7rjcTYC0sU8mGtABWCkItPJGkK5I6TSI',
-    tags: ['Leadership Alignment', 'Legacy Planning', 'Conflict Resolution', 'Confidential Counsel'],
-    deliverables: [
-      'Executive Leadership Profiling',
-      'Succession & Legacy Architecture',
-      'High-Stakes Conflict Strategy',
-      'Discrete 1-on-1 Advisory'
+    tags: ['Decision Counsel', 'Leadership Alignment', 'Legacy & Succession'],
+    frameworkTitle: 'Practice Framework',
+    framework: [
+      {
+        num: '01',
+        title: 'DECISION COUNSEL',
+        content: 'Clarity · Perspective · Consequential Decisions'
+      },
+      {
+        num: '02',
+        title: 'LEADERSHIP ALIGNMENT',
+        content: 'Personal Strategy · Leadership Development · Purpose & Direction'
+      },
+      {
+        num: '03',
+        title: 'LEGACY & SUCCESSION',
+        content: 'Legacy Planning · Succession Strategy · Long-Term Continuity'
+      },
+      {
+        num: '04',
+        title: 'CONFLICT RESOLUTION',
+        content: 'Mediation · Negotiation · Relationship Strategy'
+      },
+      {
+        num: '05',
+        title: 'PERSONAL & PROFESSIONAL TRANSITIONS',
+        content: 'Career Decisions · Major Life Changes · Strategic Reorientation'
+      },
+      {
+        num: '06',
+        title: 'PRIVATE COUNSEL',
+        content: 'Confidential Guidance · Stakeholder Management · Complex Personal Matters'
+      }
     ]
   },
   {
     id: 'political',
     title: 'Political Strategy',
-    subtitle: 'National Influence & Narrative Control',
-    description: 'Strategic planning for influence and national-level impact. Comprehensive campaign architecture, narrative positioning, regulatory foresight, and policy positioning.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC1VwLHqMATrgUe4wEM7JBm1NNqqn1KJ50KNNDV4NBCsOL3Hf3LaEpKszhCAdJykiH4UcchzlbUCV0cveZxyzPbg5x3UM1A_qN28lLTf4qrJu_UnlosRB4KSFmzavwQIK2_OqQej176MxG5Tna-skvtBOp8r4rkkiZA4LIw3HCMJ_wd5GjcpqFn3XBA4KFgOR68gX1IML9SrIHs9niT0E2Bu6qkhgmrYusi7dyEdsNGRiTXUgre0VuMy6Dg1UO1bwIm8FvL--r5MyI',
-    tags: ['Policy Architecture', 'Public Relations', 'Geopolitical Insight', 'Campaign Command'],
-    deliverables: [
-      'Public Policy & Campaign Frameworks',
-      'Narrative & Crisis Containment',
-      'Cross-Border Regulatory Strategy',
-      'Stakeholder Perception Mapping'
+    positioning: 'Influence, Strategy & Public Affairs',
+    subtitle: 'Influence, Strategy & Public Affairs',
+    description: 'Strategic counsel for navigating political environments, public sentiment and institutional dynamics. From campaign strategy and policy positioning to stakeholder engagement and communication, we help clients understand the landscape and act with precision.',
+    additionalDescription: 'Strategic planning for influence, public affairs and national-level impact. We develop campaign architecture, narrative positioning, policy strategy and regulatory foresight to navigate complex political and institutional environments.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/d/db/View_of_Lok_Sabha_chamber_in_the_New_Parliament_building%2C_New_Delhi.jpg',
+    tags: ['Political Positioning', 'Public Policy', 'Narrative Strategy'],
+    frameworkTitle: 'Core Deliverables',
+    framework: [
+      {
+        num: '01',
+        title: 'POLITICAL POSITIONING & PUBLIC MOBILISATION',
+        content: 'Advisory for emerging political leaders and public movements on positioning, issue selection, stakeholder engagement and long-term political strategy.'
+      },
+      {
+        num: '02',
+        title: 'PUBLIC POLICY & CAMPAIGN FRAMEWORKS',
+        content: 'Structured frameworks for campaign planning, policy positioning and strategic public engagement.'
+      },
+      {
+        num: '03',
+        title: 'REGULATORY & CROSS-BORDER STRATEGY',
+        content: 'Navigating complex regulatory landscapes, institutional frameworks and cross-border policy environments with strategic foresight and risk awareness.'
+      },
+      {
+        num: '04',
+        title: 'STAKEHOLDER & PERCEPTION MAPPING',
+        content: 'Mapping key stakeholders, interests and public perceptions to identify opportunities, risks and strategic pathways.'
+      },
+      {
+        num: '05',
+        title: 'POLITICAL INTELLIGENCE & STRATEGIC RESEARCH',
+        content: 'Research-driven analysis of political, social and institutional developments to support informed strategic decisions.'
+      },
+      {
+        num: '06',
+        title: 'NARRATIVE STRATEGY & CRISIS RESPONSE',
+        content: 'Developing clear, credible messaging and strategic communication frameworks to navigate political scrutiny, public controversy and high-pressure situations.'
+      }
     ]
   }
 ];
@@ -55,7 +140,7 @@ export default function Services({ onOpenConsultation }) {
     : servicesData.filter(s => s.title.toLowerCase().includes(activeFilter.toLowerCase()) || activeFilter.toLowerCase().includes(s.title.toLowerCase()));
 
   return (
-    <section className="py-14 sm:py-32 bg-[#0c0e10]/80 px-4 sm:px-8 md:px-16 border-y border-white/10 relative" id="services">
+    <section className="py-14 sm:py-32 bg-[#0c0e10]/80 px-4 sm:px-8 md:px-16 border-y border-white/10 relative scroll-mt-24" id="services">
       <div className="absolute top-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-white/5 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-[1440px] mx-auto relative">
@@ -64,11 +149,11 @@ export default function Services({ onOpenConsultation }) {
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-secondary font-bold px-3.5 py-1.5 bg-white/10 rounded-full border border-white/15 backdrop-blur-md">
               Specialized Practice
             </span>
-            <h2 className="font-headline text-2.5xl sm:text-4xl md:text-5xl text-white mt-3 sm:mt-4 font-semibold">
-              Areas of Expertise
+            <h2 className="font-headline text-2.5xl sm:text-4xl md:text-5xl text-white mt-3 sm:mt-4 font-semibold tracking-tight">
+              Areas of Counsel
             </h2>
             <p className="font-body text-xs sm:text-base text-gray-300 max-w-xl mt-2 sm:mt-3 font-light">
-              Tailored strategic consulting designed for distinct domains of global influence.
+              Focused advisory for complex decisions across business, politics and life
             </p>
           </div>
           <div className="hidden md:block">
@@ -121,7 +206,7 @@ export default function Services({ onOpenConsultation }) {
                     {service.title}
                   </h3>
                   <p className="text-[10px] sm:text-xs text-secondary font-mono mb-2.5 uppercase tracking-widest">
-                    {service.subtitle}
+                    {service.positioning}
                   </p>
                   <p className="font-body text-xs sm:text-sm text-gray-300 mb-4 sm:mb-5 line-clamp-3 leading-relaxed font-light">
                     {service.description}
@@ -148,7 +233,7 @@ export default function Services({ onOpenConsultation }) {
         </div>
       </div>
 
-      {/* Service Detail Modal - Optimized for Mobile Dialog */}
+      {/* Service Detail Modal - Rich Framework Explorer */}
       {selectedService && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-2xl animate-in fade-in duration-300">
           <div className="bg-[#16191c] border border-white/20 rounded-2xl sm:rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-4 sm:p-8 relative text-white shadow-2xl my-auto">
@@ -160,29 +245,55 @@ export default function Services({ onOpenConsultation }) {
               <X className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </button>
 
-            <div className="mb-3 sm:mb-6 pr-8">
+            <div className="mb-4 sm:mb-6 pr-8">
               <span className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] text-secondary font-bold px-3 py-1 bg-white/10 rounded-full border border-white/15">
                 Specialized Practice
               </span>
               <h2 className="font-headline text-xl sm:text-4xl text-white mt-2.5 font-semibold">{selectedService.title}</h2>
-              <p className="text-[11px] sm:text-sm font-mono text-secondary mt-1">{selectedService.subtitle}</p>
+              <p className="text-[11px] sm:text-sm font-mono text-secondary mt-1 tracking-wide">{selectedService.positioning}</p>
             </div>
 
             <div className="aspect-video w-full rounded-xl overflow-hidden mb-4 sm:mb-5 border border-white/15 shadow-xl">
               <img src={selectedService.image} alt={selectedService.title} className="w-full h-full object-cover" />
             </div>
 
-            <p className="font-body text-xs sm:text-base text-gray-200 mb-5 sm:mb-6 leading-relaxed font-light">
-              {selectedService.description}
-            </p>
+            <div className="space-y-3 mb-5 sm:mb-6">
+              <p className="font-body text-xs sm:text-sm md:text-base text-gray-200 leading-relaxed font-light">
+                {selectedService.description}
+              </p>
+              {selectedService.additionalDescription && (
+                <div className="p-3 sm:p-4 bg-white/[0.03] border-l-2 border-secondary rounded-r-xl">
+                  <p className="font-body text-xs sm:text-sm text-gray-300 leading-relaxed font-light italic">
+                    {selectedService.additionalDescription}
+                  </p>
+                </div>
+              )}
+            </div>
 
             <div className="mb-5 sm:mb-6">
-              <h4 className="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-white mb-2.5">Core Deliverables</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {selectedService.deliverables.map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 p-2.5 sm:p-3 bg-white/5 rounded-xl border border-white/10 text-xs text-gray-200">
-                    <CheckCircle2 className="w-4 h-4 text-secondary shrink-0" />
-                    <span>{item}</span>
+              <div className="flex items-center justify-between mb-3 border-b border-white/10 pb-2">
+                <h4 className="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-secondary font-bold">
+                  {selectedService.frameworkTitle || 'Practice Framework'}
+                </h4>
+                <span className="font-mono text-[10px] text-gray-400">06 Core Disciplines</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                {selectedService.framework.map((item) => (
+                  <div 
+                    key={item.num} 
+                    className="p-3 sm:p-4 bg-white/[0.03] rounded-xl border border-white/10 flex flex-col justify-start hover:border-secondary/40 transition-colors"
+                  >
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="font-mono text-[10px] sm:text-xs text-secondary font-bold px-1.5 py-0.5 bg-white/5 rounded border border-white/10 shrink-0">
+                        {item.num}
+                      </span>
+                      <h5 className="font-headline text-xs sm:text-sm font-semibold text-white tracking-wide leading-snug">
+                        {item.title}
+                      </h5>
+                    </div>
+                    <p className="font-body text-[11px] sm:text-xs text-gray-300 leading-relaxed font-light pl-6 sm:pl-7">
+                      {item.content}
+                    </p>
                   </div>
                 ))}
               </div>
